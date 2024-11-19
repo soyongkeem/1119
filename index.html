@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국민가요 플레이어</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+<div id="copyright" onclick=>© 2024. soyongkeem. All rights reserved.</div>
+<div id="footerModal" class="footer-modal">2024 김서영 All rights reserved.<br>instagram @soyongkeem</div>
+<div id="youtubePlayer"></div>
+<div id="resetModal" class="footer-modal">Reset</div>
+
+<div id="labels">
+    <div id="zoomButtons">
+        <button id="restartView">🌐</button>
+        <button id="zoomIn" onclick="zoomCamera(-1)">+</button>
+        <button id="zoomOut" onclick="zoomCamera(1)">-</button>
+    </div>
+    
+    <div id="labelToggle" onclick="toggleLabels()">Locations</div>
+    <div id="labelContainer" style="display: none;">
+        <div class="label" id="label-dot1" onclick="onLabelClick('dot1')">Dot1: Korea</div>
+        <div class="label" id="label-dot2" onclick="onLabelClick('dot2')">Dot2: Japan</div>
+        <div class="label" id="label-dot3" onclick="onLabelClick('dot3')">Dot3: Hongkong</div>
+        <div class="label" id="label-dot4" onclick="onLabelClick('dot4')">Dot4: Indonesia</div>
+        <div class="label" id="label-dot5" onclick="onLabelClick('dot5')">Dot5: Italy</div>
+        <div class="label" id="label-dot6" onclick="onLabelClick('dot6')">Dot6: United Kingdom</div>
+        <div class="label" id="label-dot7" onclick="onLabelClick('dot7')">Dot7: Spain</div>
+        <div class="label" id="label-dot8" onclick="onLabelClick('dot8')">Dot8: United States</div>
+        <div class="label" id="label-dot9" onclick="onLabelClick('dot9')">Dot9: Cuba</div>
+        <div class="label" id="label-dot10" onclick="onLabelClick('dot10')">Dot10: Brazil</div>
+        
+    </div>
+</div>
+
+<div id="description"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-outline" id="cursor-outline"></div>
+<!-- 우측 상단 텍스트 -->
+<div id="playerButton">국민가요 플레이어</div>
+
+<!-- 모달 오버레이 -->
+<div id="modalOverlay"></div>
+
+<!-- 모달 -->
+<div id="modal">
+    <p><strong>국민가요</strong>는 각국을 대표하는 상징적인 노래로<br>대중의 정서와 문화를 담아 시대를 초월해<br>사랑받는 곡들을 의미합니다.
+        <br>세계의 국민가요를 지구본과 함께 탐험하세요.
+    </p>
+</div>
+<script src="scripts.js"></script>
+
+</body>
+</html>
